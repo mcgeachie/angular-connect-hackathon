@@ -19,12 +19,10 @@
     function getData(){
       var deferred = $q.defer();
 
-      deferred.resolve([
-        {
-          propertyOne: 'valueOne',
-          propertyTwo: 'valueTwo',
-        }
-      ]);
+      deferred.resolve({
+        errorId: 'ES1234',
+        solution: 'Here is the solution'
+      });
 
       return deferred.promise;
     }

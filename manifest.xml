@@ -6,8 +6,8 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="My Support Helper"/>
   <Description DefaultValue="[Task pane Add-in description]"/>
-  <HighResolutionIconUrl DefaultValue="[Icon URL]"/>
-  <SupportUrl DefaultValue="[Support URL]"/>
+  <!--<HighResolutionIconUrl DefaultValue="[Icon URL]"/>-->
+  <!-- <SupportUrl DefaultValue="[Support URL]"/> -->
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>
