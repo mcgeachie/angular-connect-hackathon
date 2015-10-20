@@ -1,5 +1,9 @@
-<h2>{{::vm.errorCodes}}</h2>
-
-<h3>This error has a possible solution</h3>
-
-{{::vm.solutions}}
+<div ng-if="vm.solutions">
+  <ul>
+    <li ng-repeat="incident in ::vm.solutions">
+      <h2>{{incident.errorCode}}</h2>
+      <h3>This error has a possible solution</h3>
+      <p>{{incident.solution}}</p>
+    </li>
+  </ul>
+</div>

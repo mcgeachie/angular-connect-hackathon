@@ -21,7 +21,7 @@
         .then(function(data) {
           vm.solutions.push({
             errorCode: error,
-            solution: data
+            solution: data.solution
           })
         });
     }
