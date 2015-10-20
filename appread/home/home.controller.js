@@ -9,17 +9,15 @@
    */
   function homeController(dataService){
     var vm = this;  // jshint ignore:line
-    vm.title = 'home controller';
-    vm.dataObject = {};
+    var errorCodes = Office.context.mailbox.item.getRegExMatches().LegacyErrorCode;
 
-    getDataFromService();
+    console.log(Office.context.mailbox.item);
 
-    function getDataFromService(){
-      dataService.getData()
-        .then(function(response){
-          vm.dataObject = response;
-        });
-    }
+    dataService.getErrorFix(errorCodes)
+      .then(function(repoData) {
+        vm.errorCodes = errorCodes;
+        vm.solutions = repoData;
+      });
   }
 
 })();

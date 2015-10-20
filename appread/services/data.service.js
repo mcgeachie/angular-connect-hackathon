@@ -11,16 +11,17 @@
 
     // public signature of the service
     return {
-      getData: getData
+      getErrorFix: getErrorFix
     };
 
     /** *********************************************************** */
 
-    function getData(){
+    function getErrorFix(errorCodes){
+
+      console.log('service', errorCodes);
       var deferred = $q.defer();
 
       deferred.resolve({
-        errorId: 'ES1234',
         solution: 'Here is the solution'
       });
 
