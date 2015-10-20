@@ -16,9 +16,9 @@
 
     /** *********************************************************** */
 
-    function getErrorFix(errorCodes){
+    function getErrorFix(errorCode){
 
-      console.log('service', errorCodes);
+      console.log('service', errorCode);
       var deferred = $q.defer();
 
       deferred.resolve({

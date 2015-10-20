@@ -11,13 +11,20 @@
     var vm = this;  // jshint ignore:line
     var errorCodes = Office.context.mailbox.item.getRegExMatches().LegacyErrorCode;
 
-    console.log(Office.context.mailbox.item);
+    vm.solutions = [];
 
-    dataService.getErrorFix(errorCodes)
-      .then(function(repoData) {
-        vm.errorCodes = errorCodes;
-        vm.solutions = repoData;
-      });
+    for (var i = 0; i < errorCodes.length; i++) {
+
+      var errorCode = errorCodes[i];
+
+      dataService.getErrorFix(errorCode)
+        .then(function(data) {
+          vm.solutions.push({
+            errorCode: error,
+            solution: data
+          })
+        });
+    }
   }
 
 })();
