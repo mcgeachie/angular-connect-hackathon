@@ -1,0 +1,79 @@
+.clearfix:after {
+  clear: both;
+  content: " ";
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+.sh-alert {
+  padding: 0;
+  position: relative;
+}
+.sh-alert .sh-text {
+  bottom: 0;
+  box-sizing: border-box;
+  left: 0;
+  line-height: 88px;
+  padding: 0 0 0 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sh-incident-list {
+  list-style: none;
+}
+.sh-incident {}
+
+.sh-incident .sh-text {
+  float: left;
+  margin-left: 10px;
+}
+.sh-error-code {
+  color: #000;
+  display: block;
+  float: left;
+  font-size: 1.8em;
+  margin: 0 0 5px 10px;
+  width: 60%;
+}
+.sh-key-image {
+  float: left;
+  height: auto;
+  width: 88px;
+}
+.sh-text {
+  float: left;
+  font-size: 1.4em;
+  font-weight: bold;
+}
+.sh-solution {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1em;
+  float: left;
+  margin-left: 10px;
+  width: 60%;
+}
+.sh-helpful {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
+}
+.sh-helpful * {
+  float: left;
+}
+.sh-helpful p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.sh-button {
+  margin-left: 10px;
+}
