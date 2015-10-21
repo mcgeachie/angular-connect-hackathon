@@ -1,27 +1,36 @@
-<div class="sh-alert alert alert-danger clearfix" role="alert">
-  <img class="sh-key-image" src="http://vignette2.wikia.nocookie.net/bttf/images/8/8e/Doc_1955.JPG/revision/latest?cb=20070221030222" />
-  <h4 class="sh-text">"1.21 Gigawatts! We have a serious problem Marty!""</h4>
-</div>
-<div ng-if="vm.solutions.length">
-    <ul class="sh-incident-list">
-        <li class="sh-incident" ng-repeat="incident in vm.solutions">
-            <img class="sh-key-image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRRXR2qf255qEgzfcgNGsYf0EZe5_hSDg_95qrNh4Vl_8Noiw4Z" alt="Marty McFly" />
-            <h2 class="sh-error-code">{{incident.errorCode}}</h2>
-            <!-- <img class="sh-key-image" src="http://www.slate.com/content/dam/slate/blogs/future_tense/2012/06/27/_back_to_the_future_future_day_hoax_today_not_the_date_shown_on_doc_s_delorean/1340833622481.jpg" alt="BTTF Image" /> -->
-            <h4 class="sh-text">"It's OK Doc, the almanac has us covered. We should..."</h3>
-            <p class="sh-solution">{{incident.solution}}</p>
-            <div class="sh-helpful clearfix">
-              <p class="">Was this solution helpful?</p>
-              <button class="sh-button" type="button" name="button">Yes</button>
-              <button class="sh-button" type="button" name="button">No</button>
-            </div>
-        </li>
-    </ul>
-</div>
-<div class="submit">
+<div ng-if="vm.problemPresent()">
+  <div class="sh-alert alert alert-danger clearfix" role="alert">
+    <img class="sh-key-image" src="http://vignette2.wikia.nocookie.net/bttf/images/8/8e/Doc_1955.JPG/revision/latest?cb=20070221030222" />
+    <h4 class="sh-text">"1.21 Gigawatts! We have a serious problem Marty!""</h4>
+  </div>
+  <div ng-if="vm.solutions.length">
+      <ul class="sh-incident-list">
+          <li class="sh-incident" ng-repeat="incident in vm.solutions">
+              <img class="sh-key-image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRRXR2qf255qEgzfcgNGsYf0EZe5_hSDg_95qrNh4Vl_8Noiw4Z" alt="Marty McFly" />
+              <h2 class="sh-error-code">{{incident.errorCode}}</h2>
+              <!-- <img class="sh-key-image" src="http://www.slate.com/content/dam/slate/blogs/future_tense/2012/06/27/_back_to_the_future_future_day_hoax_today_not_the_date_shown_on_doc_s_delorean/1340833622481.jpg" alt="BTTF Image" /> -->
+              <h4 class="sh-text">"It's OK Doc, the almanac has us covered. We should..."</h3>
+              <p class="sh-solution">{{incident.solution}}</p>
+              <div class="sh-helpful clearfix">
+                <p class="">Was this solution helpful?</p>
+                <button class="sh-button" ng-click="vm.problemSolved()" type="button" name="button">Yes</button>
+                <button class="sh-button" ng-click="vm.submitNewFix()" type="button" name="button">No</button>
+              </div>
+          </li>
+      </ul>
+  </div>
+  <div class="submit">
 
+  </div>
+  <div class="" ng-if="!vm.solutions.length">
+    <img class="sh-key-image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRRXR2qf255qEgzfcgNGsYf0EZe5_hSDg_95qrNh4Vl_8Noiw4Z" alt="Marty McFly" />
+    <h4 class="sh-text">Doc, I've got nothing!</h3>
+  </div>
 </div>
-<div class="" ng-if="!vm.solutions.length">
-  <img class="sh-key-image" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRRXR2qf255qEgzfcgNGsYf0EZe5_hSDg_95qrNh4Vl_8Noiw4Z" alt="Marty McFly" />
-  <h4 class="sh-text">Doc, I've got nothing!</h3>
+<div class="" ng-if="vm.problemFixed">
+  <div class="sh-alert alert alert-success clearfix" role="alert">
+    <img class="sh-key-image" src="https://mixedsignal.files.wordpress.com/2014/02/img_0018.jpg" />
+    <h4 class="sh-text">"Where we're going, we don't need roads Marty!""</h4>
+  </div>
+  <img class="sh-success-image" src="http://i.imgur.com/8cKgO.gif" alt="" />
 </div>

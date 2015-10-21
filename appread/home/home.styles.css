@@ -77,3 +77,8 @@
 .sh-button {
   margin-left: 10px;
 }
+.sh-success-image {
+  margin: -50px 0 0 0;
+  padding: 0;
+  width: 100%;
+}

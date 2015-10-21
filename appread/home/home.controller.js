@@ -25,5 +25,15 @@
                     });
                 });
         }
+
+        vm.problemPresent = function() {
+          return vm.solutions.length && !vm.problemFixed;
+        };
+
+        vm.problemSolved = function() {
+          vm.problemFixed = true;
+        };
+
+        vm.submitNewFix = function() {};
     }
 })();
