@@ -1,9 +1,11 @@
 <div ng-if="vm.solutions">
-  <ul>
-    <li ng-repeat="incident in ::vm.solutions">
-      <h2>{{incident.errorCode}}</h2>
-      <h3>This error has a possible solution</h3>
-      <p>{{incident.solution}}</p>
-    </li>
-  </ul>
+    <div class="alert alert-danger" role="alert">Doc I've got a problem....</div>    
+    <ul>
+        <li ng-repeat="incident in ::vm.solutions">
+            <h2>{{incident.errorCode}}</h2>
+            <img ng-href="{{incident.img}}"/>
+            <h3>This error has a possible solution</h3>
+            <p>{{incident.solution}}</p>
+        </li>
+    </ul>
 </div>
